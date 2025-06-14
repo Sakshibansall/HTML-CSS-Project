@@ -15,19 +15,24 @@
                 <a href="#">
                     <img src="./images/logo.png" alt="logo">
                 </a>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
+            
 
-            <ul class="nav-items">
-                <li><a href="#">Product</a></li>
-                <li><a href="#"> About us</a></li>
-                <li><a href="#">Review</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
+            <div id="mobileSidebar" class="mobile-sidebar">
+                <ul class="nav-items">
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#"> About us</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            
             <div class="icons">
                 <a href="#">
                     <img src="./images/search.svg" alt="search bar">
@@ -141,7 +146,7 @@
 
             <div class="card1">
                 <div class="card-img">
-                    <img src="./images/solutiion3.png" alt="">
+                    <img src="./images/solution3.png" alt="">
                     <p>
                         Worry-Free Compatibility with Tesla, BMW, BYD, and All Major EV Brands: Feel confident
                         knowing your charger works seamlessly with the most popular EVs in Dubai, including Tesla,
@@ -164,6 +169,7 @@
     </section>
 
 
+    <!-- testimonial -->
     <section class="testimonial">
         <div class="testimonial-head">
             <h4>Testimonials</h4>
@@ -423,6 +429,17 @@
 
 
     <script>
+
+        // navbar
+        const hamburger = document.getElementById('hamburger');
+        const mobileSidebar = document.getElementById('mobileSidebar');
+
+        hamburger.addEventListener('click', () => {
+            mobileSidebar.classList.toggle('active');
+        });
+
+
+        // accordian
         const headers = document.querySelectorAll('.accordian-question');
 
         headers.forEach(header => {
